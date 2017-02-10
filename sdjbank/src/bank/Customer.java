@@ -13,4 +13,16 @@ public class Customer {
 		this.cpr = cpr;
 		this.address = address;
 	}
+	
+	public String getCustomerName(){
+		return name;
+	}
+	
+	public int getCPR(){
+		return cpr;
+	}
+	
+	public String getAddress(){
+		return address;
+	}
 }
