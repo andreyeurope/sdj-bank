@@ -25,4 +25,9 @@ public class Customer {
 	public String getAddress(){
 		return address;
 	}
+	
+	public ArrayList<Account> getAccounts(){
+		return accounts;
+	}
+	
 }
