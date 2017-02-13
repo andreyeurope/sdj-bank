@@ -6,7 +6,7 @@ public class Customer {
 	private String name;
 	private int cpr;
 	private String address;
-	private ArrayList<Account> accounts;
+	private ArrayList<RemoteAccount> accounts;
 	
 	public Customer(String name, int cpr, String address) {
 		this.name = name;
@@ -26,7 +26,7 @@ public class Customer {
 		return address;
 	}
 	
-	public ArrayList<Account> getAccounts(){
+	public ArrayList<RemoteAccount> getAccounts(){
 		return accounts;
 	}
 	
