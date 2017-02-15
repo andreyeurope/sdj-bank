@@ -1,4 +1,4 @@
-package bank;
+package bank.models;
 
 import java.math.BigDecimal;
 import java.util.Currency;
@@ -27,7 +27,7 @@ public class Money {
 	}
 	
 	public boolean checkIfLessThan(Money money){
-		return amount.compareTo(money.amount) == -1;
+		return amount.compareTo(money.amount) < 0;
 	}
 	
 	public boolean withdraw(Money money){

@@ -1,4 +1,4 @@
-package bank;
+package bank.models;
 
 import java.security.Timestamp;
 
