@@ -37,4 +37,12 @@ public class Money {
 			return true;
 		}
 	}
+	
+	public BigDecimal getAmount(){
+		return amount;
+	}
+	
+	public Currency getCurrency(){
+		return currency;
+	}
 }

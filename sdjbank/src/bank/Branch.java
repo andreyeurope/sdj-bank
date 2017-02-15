@@ -70,8 +70,10 @@ public class Branch implements RemoteBranch{
 			throw new Exception("Not enough money in the account");
 		}
 	}	
-	
-	public RemoteAccount getAccount(int accountNumber){
+
+	@Override
+	public RemoteAccount getAccount(int accountNumber) {
+		// TODO Auto-generated method stub
 		return accounts.get(accountNumber);
 	}
 
