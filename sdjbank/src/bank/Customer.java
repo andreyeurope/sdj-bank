@@ -30,4 +30,8 @@ public class Customer {
 		return accounts;
 	}
 	
+	public void addAccount(RemoteAccount account){
+		accounts.add(account);
+	}
+	
 }

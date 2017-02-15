@@ -68,7 +68,7 @@ public class HQ extends UnicastRemoteObject implements RemoteHQ
 
       try {
 
-          Naming.rebind("//localhost/", new HQ());
+          Naming.rebind("/localhost/", new HQ());
           System.err.println("Server ready");
 
       } catch (Exception e) {

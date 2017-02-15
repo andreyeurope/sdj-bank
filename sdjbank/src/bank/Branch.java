@@ -3,6 +3,8 @@ package bank;
 import java.rmi.RemoteException;
 import java.util.Hashtable;
 
+import services.RemoteHQ;
+
 public class Branch implements RemoteBranch{
 	private int registrationNumber;
 	private Hashtable<Integer, RemoteAccount> accounts;
@@ -35,7 +37,7 @@ public class Branch implements RemoteBranch{
 
 	@Override
 	public void transfer(RemoteAccount accountFrom, int registrationNumberTo, int accountNumberTo, Money money)
-			throws RemoteException {
+			throws Exception {
 		if(registrationNumberTo == registrationNumber){
 			// get the account to 
 			RemoteAccount accountTo = getAccount(accountNumberTo);

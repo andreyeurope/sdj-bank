@@ -34,7 +34,7 @@ public class Account implements RemoteAccount {
       return accountNumber;
    }
    
-   public boolean addTransactions(Transaction transaction)
+   public boolean addTransaction(Transaction transaction)
    {
       return transactions.add(transaction);
    }  
