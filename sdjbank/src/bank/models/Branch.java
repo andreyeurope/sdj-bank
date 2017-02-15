@@ -1,17 +1,19 @@
 package bank.models;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.Hashtable;
 
 import bank.services.RemoteHQ;
 
-public class Branch implements RemoteBranch{
+public class Branch extends UnicastRemoteObject implements RemoteBranch{
 	private int registrationNumber;
 	private Hashtable<Integer, RemoteAccount> accounts;
 	private Hashtable<Integer, Customer> customers;
 	private RemoteHQ hq;
 
-	public Branch(int registrationNumber, Hashtable<Integer, RemoteAccount> accounts, Hashtable<Integer,Customer> customers){
+	public Branch(int registrationNumber, Hashtable<Integer, RemoteAccount> accounts, Hashtable<Integer,Customer> customers)
+					throws RemoteException{
 		this.registrationNumber = registrationNumber;
 		this.accounts = accounts;
 		this.customers = customers;

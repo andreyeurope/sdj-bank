@@ -1,8 +1,9 @@
 package bank.models;
 
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
-public class Account implements RemoteAccount {
+public class Account extends UnicastRemoteObject implements RemoteAccount {
 
 	private Customer owner;
 	private int registrationNumber;

@@ -1,16 +1,17 @@
 package bank.services;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.Currency;
 import java.util.HashMap;
 
 import bank.models.Money;
 import bank.models.RemoteBranch;
 
-public class HQ implements RemoteHQ {
+public class HQ extends UnicastRemoteObject implements RemoteHQ {
 	private HashMap<Integer, RemoteBranch> branches;
 
-	public HQ(HashMap<Integer, RemoteBranch> branches){
+	public HQ(HashMap<Integer, RemoteBranch> branches) throws RemoteException{
 		this.branches = branches;
 	}
 	@Override
