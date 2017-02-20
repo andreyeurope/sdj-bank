@@ -1,5 +1,6 @@
 package bank.models;
 
+import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ public class Account extends UnicastRemoteObject implements RemoteAccount {
 	private ArrayList<Transaction> transactions;
 	private Money money;
 
-	public Account(Customer owner, int registrationNumber, int accountNumber) {
+	public Account(Customer owner, int registrationNumber, int accountNumber) throws RemoteException {
 		this.owner = owner;
 		this.registrationNumber = registrationNumber;
 		this.accountNumber = accountNumber;
