@@ -2,6 +2,8 @@ package bank.models;
 
 import java.security.Timestamp;
 
+import bank.branch.RemoteAccount;
+
 public class Transaction {
 	public static final byte DEPOSITE = 0;
 	public static final byte WITHDRAW = 1;
